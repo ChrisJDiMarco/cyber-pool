@@ -1,0 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+html, body, #root { margin: 0; width: 100%; height: 100%; background: #020617; }
+body { overflow: hidden; }
+button { -webkit-tap-highlight-color: transparent; }
+button:focus-visible { outline: 2px solid #67e8f9; outline-offset: 3px; }
+.game-surface { height: 100dvh; }
+.save-warning { position: fixed; left: 12px; bottom: 8px; z-index: 100; color: #fde68a; background: #0f172a; padding: 8px; font: 12px system-ui; }
+@media (max-width: 640px) {
+  .game-header { padding-left: 10px; padding-right: 10px; gap: 6px; }
+  .game-header > div:first-child > div:first-child { padding: 8px; }
+  .game-header > div:nth-child(2) { padding: 5px 10px; gap: 6px; }
+  .game-header > div:last-child { gap: 4px; }
+  .game-header > div:last-child > button { padding: 8px; }
+  .game-toolbar { padding: 8px 10px; flex-wrap: wrap; justify-content: center; gap: 10px; border-radius: 22px; }
+  .game-toolbar > div:first-child { gap: 4px; }
+  .game-toolbar > div:nth-child(2) { gap: 16px; }
+  .game-surface .w-96 { width: min(24rem, calc(100vw - 24px)); }
+}
